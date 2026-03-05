@@ -48,6 +48,8 @@ Create a `Lab Task` issue titled: `[Task] Build the Data Pipeline`
 > Break line at the end of all curl commands json
 >
 > Load test the api to make it robust enough to handle the load by students
+>
+> Give hints how to provide prompts where plausible, with the "planning", "step-by-step", "explain" bit in it.
 
 > We follow the usual [`Git workflow`](../../../wiki/git-workflow.md) to complete all tasks.
 
@@ -88,6 +90,7 @@ Create a `Lab Task` issue titled: `[Task] Build the Data Pipeline`
    > Items with `"type": "lab"` are labs. Items with `"type": "task"` have a non-null `task` field and belong to the lab specified in the `lab` field.
    > 
    > You can paste the response in an [online JSON viewer](https://jsonformatter.org/) and press beautify to view it properly.
+
 #### 1.2.2. Fetch check logs
 
 1. To fetch the first 5 check logs,
