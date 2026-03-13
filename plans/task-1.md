@@ -1,16 +1,16 @@
 # Task 1 plan
 
-Provider: Qwen Code API (recommended) or OpenRouter.
-Config in .env.agent.secret: LLM_API_KEY, LLM_API_BASE, LLM_MODEL.
+Provider: Qwen Code API via qwen-code-oai-proxy on VM (OpenAI-compatible).
+Config is stored in .env.agent.secret: LLM_API_KEY, LLM_API_BASE, LLM_MODEL.
 
 agent.py:
-- read question from argv
-- load .env.agent.secret
-- call OpenAI-compatible /chat/completions via HTTP
-- print single-line JSON: {"answer": "...", "tool_calls": []}
-- debug only to stderr
+- reads question from argv
+- loads .env.agent.secret
+- calls POST {LLM_API_BASE}/chat/completions
+- prints one-line JSON to stdout: {"answer": "...", "tool_calls": []}
+- prints debug only to stderr
 
-Tests:
+Test:
 - run agent.py as subprocess
 - parse stdout JSON
-- check keys answer/tool_calls exist
+- check that "answer" and "tool_calls" exist
